@@ -5,8 +5,7 @@ import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
-    <main className="bg-backgroundColor flex min-h-screen flex-col items-center justify-between p-24 pt-0">
-      <Navbar/>
+    <main className="bg-backgroundColor flex min-h-screen flex-col items-center justify-between pt-0">
       <Main />
       <Projects />
     </main>
