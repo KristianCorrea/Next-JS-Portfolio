@@ -21,16 +21,16 @@ const Main = () => {
                     I'm a Full-Stack Web Developer. blah blah blah blah
                 </p>
                 <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
-                    <div className='rounded-full bg-[#FFFFFF] shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <div className='rounded-full bg-[#FFFFFF] shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-105 ease-in duration-75'>
                         <FaLinkedinIn />
                     </div>
-                    <div className='rounded-full bg-[#FFFFFF] shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <div className='rounded-full bg-[#FFFFFF] shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-105 ease-in duration-75'>
                         <FaGithub />
                     </div>
-                    <div className='rounded-full bg-[#FFFFFF] shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <div className='rounded-full bg-[#FFFFFF] shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-105 ease-in duration-75'>
                         <AiOutlineMail />
                     </div>
-                    <div className='rounded-full bg-[#FFFFFF] shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <div className='rounded-full bg-[#FFFFFF] shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-105 ease-in duration-75'>
                         <BsFillPersonLinesFill />
                     </div>
                 </div>

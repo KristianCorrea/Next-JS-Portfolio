@@ -7,14 +7,40 @@ import ProjectItem from './ProjectItem'
 
 const Projects = () => {
   return (
-    <div id='projects' className='w-full px-4' >
-      <div className='max-w-[900px] mx-auto px-2 py-16 bg-[#FFFFFF] shadow-md rounded-xl'>
-        <p className='py-4 text-xl tracking-widest uppercase text-[#5651e5]'>Projects</p>
-        <div className='grid md:grid-col-2 gap-8'>
+    <div id='projects' className='w-full px-4 pb-4' >
+      <p className='text-center py-4 text-xl tracking-widest uppercase text-[#5651e5]'>Projects</p>
+      <div className='max-w-[900px] mx-auto '>
+        
+        <div className='grid md:grid-col-2 gap-5'>
 
-          <ProjectItem title="React Calculator" projectImg={reactCalculator} tech="ReactJS" projectUrl={journeyImg}/>
-          <ProjectItem title="BackEnd" projectImg={journeyImg} tech="NodeJS" projectUrl={journeyImg}/>
+          <ProjectItem 
+            title="React Calculator"
+            description="A simple calculator built with ReactJS"
+            projectImg={reactCalculator}
+            tech="ReactJS"
+            projectUrl={journeyImg} 
+            isOpen={false}
+          />
+          <ProjectItem 
+            title="Journey"
+            description="An iternary generator."
+            projectImg={journeyImg}
+            tech="ReactJS"
+            projectUrl={journeyImg}
+            isOpen={true}
+          />
+          <ProjectItem 
+            title="Journey"
+            description="An iternary generator."
+            projectImg={journeyImg}
+            tech="ReactJS"
+            projectUrl={journeyImg}
+            isOpen={false}
+          />
 
+        </div>
+        <div className='py-4 ml-2' >
+          <span>View All Projects</span>
         </div>
       </div>
     </div>
