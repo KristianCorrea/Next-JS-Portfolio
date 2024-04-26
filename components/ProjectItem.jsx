@@ -1,15 +1,23 @@
-import React from 'react'
+"use client"
+import React, {useState} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const ProjectItem = ({title, description, projectImg, tech, projectUrl, isOpen}) => {
-  var expandClass = isOpen ? '' : 'hidden'
+const ProjectItem = ({title, description, projectImg, tech, projectUrl, startOpen=false}) => {
+  const [isHovered, setIsHovered] = useState(false)
+  const [isOpen, setIsOpen] = useState(startOpen)
+  var expandClass = isOpen ? 'py-5 max-h-[1000px] opacity-100 scale-100' : 'max-h-0 opacity-0 scale-0'
   var svgRotateAngle = isOpen ? 'rotate-180' : ''
+  var hoverScale = isHovered ? 'scale-[0.98] ' : '';
   var rootDiv = isOpen ? 'shadow-md rounded-xl ' : '' // Give root container shadow instead if open.
-  var mainDiv = isOpen ? 'rounded-t-xl' : 'rounded-xl hover:scale-[0.98] transform transition shadow-md'
+  var mainDiv = isOpen ? 'rounded-t-xl' : 'rounded-xl shadow-md'
   return (
-    <div className={`${rootDiv}`}>
-      <div className={`py-3 px-3 relative h-auto w-full group cursor-pointer hover:bg-gray-100 bg-[#FFFFFF] ${mainDiv} text-black hover:text-blue-500`}>
+    <div className={`${rootDiv} ${hoverScale} transform transition duration-200`}>
+      <div className={`py-3 px-3 relative h-auto w-full group cursor-pointer hover:bg-gray-100 bg-[#FFFFFF] ${mainDiv} text-black hover:text-blue-500`}
+        onMouseEnter={()=>setIsHovered(true)}
+        onMouseLeave={()=>setIsHovered(false)}
+        onClick={()=>setIsOpen(!isOpen)}
+      >
         <div className='flex items-center'>
           <div className="h-20 w-20 flex items-center" >
             <Image className=' rounded-xl object-cover' src={projectImg} alt='/' layout='responsive'/>
@@ -28,8 +36,13 @@ const ProjectItem = ({title, description, projectImg, tech, projectUrl, isOpen})
         </div>
       </div>
         {/* conditional rendering if isOpen is true */}
-      <div className={`py-10 ${expandClass} border-t border-gray-200 transition-all duration-500`}>
-            TITLE GOES HERE
+      <div className={` ${expandClass} border-t border-gray-200 transition-all duration-200 transform`}>
+        <div className='px-4'>
+          <span>Description</span>
+          <div>
+            Tech Stacks
+          </div>
+        </div>
       </div>
       
       

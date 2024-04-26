@@ -19,7 +19,6 @@ const Projects = () => {
             projectImg={reactCalculator}
             tech="ReactJS"
             projectUrl={journeyImg} 
-            isOpen={false}
           />
           <ProjectItem 
             title="Journey"
@@ -27,7 +26,7 @@ const Projects = () => {
             projectImg={journeyImg}
             tech="ReactJS"
             projectUrl={journeyImg}
-            isOpen={true}
+            startOpen={true}
           />
           <ProjectItem 
             title="Journey"
@@ -35,7 +34,6 @@ const Projects = () => {
             projectImg={journeyImg}
             tech="ReactJS"
             projectUrl={journeyImg}
-            isOpen={false}
           />
 
         </div>
