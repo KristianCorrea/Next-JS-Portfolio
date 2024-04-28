@@ -8,7 +8,7 @@ const ProjectItem = ({title, description, projectImg, tech, projectUrl, startOpe
   const [isOpen, setIsOpen] = useState(startOpen)
   var expandClass = isOpen ? 'py-5 max-h-[1000px] opacity-100 scale-100' : 'max-h-0 opacity-0 scale-0'
   var svgRotateAngle = isOpen ? 'rotate-180' : ''
-  var hoverScale = isHovered ? 'scale-[0.98] ' : '';
+  var hoverScale = isHovered ? 'scale-[0.99] ' : '';
   var rootDiv = isOpen ? 'shadow-md rounded-xl ' : '' // Give root container shadow instead if open.
   var mainDiv = isOpen ? 'rounded-t-xl' : 'rounded-xl shadow-md'
   return (
